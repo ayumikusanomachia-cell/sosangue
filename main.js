@@ -1,15 +1,16 @@
+// Importa OpenLayers como módulo
+import * as ol from 'https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js';
 
-
-var map = new ol.Map({
-  target: 'map', // o id do div no HTML
+// Cria o mapa
+const map = new ol.Map({
+  target: 'map',
   layers: [
     new ol.layer.Tile({
-      source: new ol.source.OSM() // usa OpenStreetMap como base
+      source: new ol.source.OSM()
     })
   ],
   view: new ol.View({
-    center: [0, 0], // coordenadas iniciais
-    zoom: 2         // nível de zoom inicial
+    center: ol.proj.fromLonLat([-47.06, -22.90]), // exemplo: Campinas
+    zoom: 10
   })
 });
-
