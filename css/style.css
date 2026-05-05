@@ -12,6 +12,11 @@ nav{
     gap: 250px;
 }
 
+#map {
+  width: 100%;
+  height: 500px;
+}
+
 /*Selecinando cidades*/
 .accordion-item{
     border: 15px, #CD1618;
